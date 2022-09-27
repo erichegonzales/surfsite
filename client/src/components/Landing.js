@@ -1,10 +1,10 @@
 import { Container, Form, Button, Image, Card } from "react-bootstrap";
 
-function Landing() {
+const Landing = () => {
   return (
     <Container>
       <h1>Welcome to AllThingsSurf</h1>
-      <h3>A community where all surfers connect</h3>
+      <h3>A community where all surfers can connect</h3>
       <Image src="https://i0.heartyhosting.com/www.surfer.com/wp-content/uploads/2019/12/laura.jpg?resize=1200%2C630" />
       <Container>
         <h3>Login</h3>

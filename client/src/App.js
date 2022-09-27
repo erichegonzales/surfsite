@@ -1,8 +1,9 @@
 import './App.css';
 import Navigation from "./components/Navigation";
 import Landing from "./components/Landing";
-import PostsFeed from "./components/PostsFeed";
-import ScrollExample from "./components/scroll_example/Scroll";
+import PostFeed from "./components/PostFeed";
+import Profile from "./components/Profile";
+import Scroll from "./components/scroll_example/Scroll";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -11,8 +12,9 @@ function App() {
       <Navigation />
       <Routes>
         <Route exact path="/" element={<Landing />} />
-        <Route exact path="/postsfeed" element={<PostsFeed />} />
-        <Route exact path="/scroll" element={<ScrollExample />} />
+        <Route exact path="/feed" element={<PostFeed />} />
+        <Route exact path="/scroll" element={<Scroll />} />
+        <Route exact path="/profile" element={<Profile />} />
       </Routes>
     </div>
   );

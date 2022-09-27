@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Comment from "./Comment";
-import Loader from "./Loader";
-import EndMessage from "./EndMessage";
+import Loader from "../Loader";
+import EndMessage from "../EndMessage";
 
 function Scroll() {
   const [items, setItems] = useState([]);

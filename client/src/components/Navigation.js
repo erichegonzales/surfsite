@@ -1,6 +1,6 @@
 import { Nav, Navbar, NavDropdown, Container } from 'react-bootstrap'
 
-function Navigation() {
+const Navigation = () => {
     return (
       <Navbar bg="dark" expand="lg">
         <Container>
@@ -10,7 +10,8 @@ function Navigation() {
             <Nav className="me-auto">
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/feed">Feed</Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <Nav.Link href="/profile">Profile</Nav.Link>
+              {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Another action
@@ -22,7 +23,7 @@ function Navigation() {
                 <NavDropdown.Item href="#action/3.4">
                   Separated link
                 </NavDropdown.Item>
-              </NavDropdown>
+              </NavDropdown> */}
             </Nav>
           </Navbar.Collapse>
         </Container>
