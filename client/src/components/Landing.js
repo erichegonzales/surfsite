@@ -1,6 +1,6 @@
 import { Container, Form, Button, Image, Card } from "react-bootstrap";
 
-const Landing = () => {
+function Landing() {
   return (
     <Container>
       <h1>Welcome to AllThingsSurf</h1>
@@ -41,7 +41,7 @@ const Landing = () => {
             src="https://i.guim.co.uk/img/media/710283e4389eeba6fce47996f4d67484bdbe3a33/0_279_7158_4295/master/7158.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=9dd9ea1f0d66e2bacba4f36cd276912a"
           />
           <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+            <Card.Title>Latest News</Card.Title>
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
@@ -56,7 +56,7 @@ const Landing = () => {
             src="https://i.guim.co.uk/img/media/710283e4389eeba6fce47996f4d67484bdbe3a33/0_279_7158_4295/master/7158.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=9dd9ea1f0d66e2bacba4f36cd276912a"
           />
           <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+            <Card.Title>Latest Posts</Card.Title>
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
@@ -71,7 +71,7 @@ const Landing = () => {
             src="https://i.guim.co.uk/img/media/710283e4389eeba6fce47996f4d67484bdbe3a33/0_279_7158_4295/master/7158.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=9dd9ea1f0d66e2bacba4f36cd276912a"
           />
           <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+            <Card.Title>Latest Lessons</Card.Title>
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
