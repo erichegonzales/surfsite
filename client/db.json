@@ -182,5 +182,20 @@
             "video": "https://dafftube.org/video-links/#fvp_Sample_1280x720_mp4,0s",
             "content": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
         }
+    ],
+    "articles": [
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Chris Isidore",
+            "title": "Used cars have become unaffordable - CNN",
+            "description": "High prices and rising interest rates are putting used cars out of reach for a growing number of car shoppers.",
+            "url": "https://www.cnn.com/2022/09/29/business/used-cars-unaffordable/index.html",
+            "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/220929081816-01-carmax-used-cars-dealership.jpg?q=w_800,c_fill",
+            "publishedAt": "2022-09-29T18:23:00Z",
+            "content": "High prices and rising interest rates are putting used cars out of reach for a growing number of car shoppers.\r\nThats bad news for CarMax, the nations largest used car dealer. CarMax reported Thursda… [+2489 chars]"
+        }
     ]
 }

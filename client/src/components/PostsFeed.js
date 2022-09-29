@@ -5,7 +5,7 @@ import Post from "./Post";
 import Loader from "./Loader";
 import EndMessage from "./EndMessage";
 
-const PostFeed = () => {
+const PostsFeed = () => {
   const [posts, setPosts] = useState([]);
   const [hasMore, setHasMore] = useState(true);
   const [page, setPage] = useState(2);
@@ -60,4 +60,4 @@ const PostFeed = () => {
   );
 };
 
-export default PostFeed;
+export default PostsFeed;

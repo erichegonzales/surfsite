@@ -1,5 +1,5 @@
 import { Container, Image, Tabs, Tab, Badge, Button, TabContainer } from 'react-bootstrap'
-import PostTab from './PostTab'
+import PostsTab from './PostsTab'
 
 const Profile = () => {
 
@@ -16,7 +16,7 @@ const Profile = () => {
       <Button>Message</Button>
       <Tabs>
         <Tab eventKey="posts" title="Posts">
-          <PostTab />
+          <PostsTab />
         </Tab>
         <Tab eventKey="lessons" title="Lessons"></Tab>
       </Tabs>

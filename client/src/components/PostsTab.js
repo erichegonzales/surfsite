@@ -1,11 +1,11 @@
-import { Container, CardGroup, Row, Col } from "react-bootstrap";
+import { Container, CardGroup} from "react-bootstrap";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useEffect, useState } from "react";
 import Loader from "./Loader";
 import EndMessage from "./EndMessage";
 import Post from "./Post";
 
-const PostTab = () => {
+const PostsTab = () => {
   const [posts, setPosts] = useState([]);
   const [hasMore, setHasMore] = useState(true);
   const [page, setPage] = useState(2);
@@ -58,4 +58,4 @@ const PostTab = () => {
   );
 };
 
-export default PostTab;
+export default PostsTab;

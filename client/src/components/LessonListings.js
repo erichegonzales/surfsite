@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container, Form, Row, Col } from "react-bootstrap";
+import { Container, Form, CardGroup } from "react-bootstrap";
 import { BsSearch } from "react-icons/bs";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Lesson from "./Lesson";
@@ -40,42 +40,40 @@ const LessonListings = () => {
 
   return (
     <>
-      <Form className="lesson-search">
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>
-            <BsSearch />
-          </Form.Label>
-          <Form.Control type="text" placeholder="Search" />
-        </Form.Group>
-
-        <Form.Group>
-          <Form.Label>Filter</Form.Label>
-          <Form.Select>
-            <option>Select</option>
-            <option>Option</option>
-            <option>Option</option>
-          </Form.Select>
-        </Form.Group>
-      </Form>
-
       <Container>
-        <Row>
-          <Col></Col>
-          <Col xs={8}>
-            <InfiniteScroll
-              dataLength={lessons.length} //This is important field to render the next data
-              next={fetchData}
-              hasMore={hasMore}
-              loader={<Loader />}
-              endMessage={<EndMessage />}
-            >
-              {lessons.map((lesson) => {
-                return <Lesson key={lesson.id} lesson={lesson} />;
-              })}
-            </InfiniteScroll>
-          </Col>
-          <Col></Col>
-        </Row>
+        <Form className="lesson-search">
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>
+              <BsSearch />
+            </Form.Label>
+            <Form.Control type="text" placeholder="Search" />
+          </Form.Group>
+
+          <Form.Group>
+            <Form.Label>Filter</Form.Label>
+            <Form.Select>
+              <option>Select</option>
+              <option>Option</option>
+              <option>Option</option>
+            </Form.Select>
+          </Form.Group>
+        </Form>
+      </Container>
+
+      <Container >
+        <InfiniteScroll
+          dataLength={lessons.length} //This is important field to render the next data
+          next={fetchData}
+          hasMore={hasMore}
+          loader={<Loader />}
+          endMessage={<EndMessage />}
+        >
+          <CardGroup>
+            {lessons.map((lesson) => {
+              return <Lesson key={lesson.id} lesson={lesson} />;
+            })}
+          </CardGroup>
+        </InfiniteScroll>
       </Container>
     </>
   );
