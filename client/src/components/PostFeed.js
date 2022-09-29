@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col, Button, Overlay, Popover } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "./Post";
 import Loader from "./Loader";

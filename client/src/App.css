@@ -46,3 +46,7 @@
   transform: scale(1.5);
   padding-bottom: 2px;
 }
+
+.lesson-search {
+  display: inline-flex;
+}
