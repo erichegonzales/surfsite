@@ -9,6 +9,8 @@ class User(models.Model):
     email = models.EmailField(max_length=30, null=True)
     bio = models.CharField(max_length=500, null=True)
     profile_picture = models.ImageField(null=True)
+    followers = models.IntegerField(default=0, null=True)
+    following = models.IntegerField(default=0, null=True)
     experience_level = models.CharField(max_length=30, null=True)
     is_coach = models.BooleanField(default=False)
     
@@ -24,8 +26,9 @@ class Coach(models.Model):
         return self.user.name
 
 class Post(models.Model):
-    image = models.ImageField(null=True)
-    caption = models.CharField(max_length=500, null=True)
+    image = models.CharField(max_length=500, null=True)
+    video = models.CharField(max_length=500, null=True)
+    content = models.CharField(max_length=1000, null=True)
     location = models.CharField(max_length=100, null=True)
     likes = models.IntegerField(default=0)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)

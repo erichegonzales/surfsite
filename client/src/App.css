@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.surf-logo {
+  transform: scale(2);
+  border-radius: 5px;
+}
+
+.plus-icon {
+  transform: scale(1.5);
+  padding-bottom: 2px;
+}

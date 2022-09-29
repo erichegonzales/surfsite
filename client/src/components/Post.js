@@ -8,8 +8,8 @@ const Post = ({ post }) => {
       <Card style={{ width: "18rem" }}>
         <Card.Body>
           <Card.Title>id: {post.id} </Card.Title>
-          <Card.Img src={post.image}></Card.Img>
-            { post.video === null ? "" : <Video src={post.video} />}
+          <Card.Img src={post.image} ></Card.Img>
+          {post.video === null ? "" : <Video src={post.video} />}
           <Card.Text>comment: {post.content}</Card.Text>
         </Card.Body>
       </Card>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col, Button, Overlay, Popover } from "react-bootstrap";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "./Post";
 import Loader from "./Loader";
@@ -20,8 +20,6 @@ const PostFeed = () => {
     getPosts();
   }, []);
 
-  console.log(posts);
-
   const fetchPosts = async () => {
     const res = await fetch(
       `http://localhost:3004/posts?_page=${page}&_limit=5`
@@ -30,30 +28,36 @@ const PostFeed = () => {
     return data;
   };
 
-    const fetchData = async () => {
-      const postsFromServer = await fetchPosts();
-      setPosts([...posts, ...postsFromServer]);
-      if (postsFromServer.length === 0 || postsFromServer.length < 5) {
-        setHasMore(false);
-      }
-      setPage(page + 1);
-    };
+  const fetchData = async () => {
+    const postsFromServer = await fetchPosts();
+    setPosts([...posts, ...postsFromServer]);
+    if (postsFromServer.length === 0 || postsFromServer.length < 5) {
+      setHasMore(false);
+    }
+    setPage(page + 1);
+  };
 
   return (
     <Container>
-      <InfiniteScroll
-        dataLength={posts.length} //This is important field to render the next data
-        next={fetchData}
-        hasMore={hasMore}
-        loader={<Loader />}
-        endMessage={<EndMessage />}
-      >
-        {posts.map((post) => {
-          return <Post key={post.id} post={post} />;
-        })}
-      </InfiniteScroll>
+      <Row>
+        <Col></Col>
+        <Col xs={8}>
+          <InfiniteScroll
+            dataLength={posts.length} //This is important field to render the next data
+            next={fetchData}
+            hasMore={hasMore}
+            loader={<Loader />}
+            endMessage={<EndMessage />}
+          >
+            {posts.map((post) => {
+              return <Post key={post.id} post={post} />;
+            })}
+          </InfiniteScroll>
+        </Col>
+        <Col></Col>
+      </Row>
     </Container>
   );
-}
+};
 
 export default PostFeed;

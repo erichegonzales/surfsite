@@ -1,4 +1,4 @@
-import { Container, Form, Button, Image, Card } from "react-bootstrap";
+import { Container, Form, Button, Image, Card, CardGroup } from "react-bootstrap";
 
 const Landing = () => {
   return (
@@ -12,9 +12,6 @@ const Landing = () => {
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" placeholder="Enter email" />
-            {/* <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text> */}
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -34,7 +31,7 @@ const Landing = () => {
         </Button>
       </Container>
 
-      <Container>
+      <CardGroup>
         <Card style={{ width: "18rem" }}>
           <Card.Img
             variant="top"
@@ -79,7 +76,7 @@ const Landing = () => {
             <Button variant="primary">Go somewhere</Button>
           </Card.Body>
         </Card>
-      </Container>
+      </CardGroup>
     </Container>
   );
 };

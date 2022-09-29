@@ -1,6 +1,6 @@
 import { Modal, Button } from "react-bootstrap";
 
-const LoginForm = ({ show, handleClose, handleShow }) => {
+const CreateLesson = ({ show, handleClose, handleShow }) => {
   return (
     <>
       <Modal
@@ -13,13 +13,10 @@ const LoginForm = ({ show, handleClose, handleShow }) => {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            Modal login
+            Modal lesson
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          I will not close if you click outside me. Don't even try to press
-          escape key.
-        </Modal.Body>
+        <Modal.Body>jk</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
@@ -31,4 +28,4 @@ const LoginForm = ({ show, handleClose, handleShow }) => {
   );
 };
 
-export default LoginForm;
+export default CreateLesson;
