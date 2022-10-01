@@ -185,6 +185,63 @@
     ],
     "articles": [
         {
+            "id": 1,
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Chris Isidore",
+            "title": "1. Used cars have become unaffordable - CNN",
+            "description": "High prices and rising interest rates are putting used cars out of reach for a growing number of car shoppers.",
+            "url": "https://www.cnn.com/2022/09/29/business/used-cars-unaffordable/index.html",
+            "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/220929081816-01-carmax-used-cars-dealership.jpg?q=w_800,c_fill",
+            "publishedAt": "2022-09-29T18:23:00Z",
+            "content": "High prices and rising interest rates are putting used cars out of reach for a growing number of car shoppers.\r\nThats bad news for CarMax, the nations largest used car dealer. CarMax reported Thursda… [+2489 chars]"
+        },
+        {
+            "id": 2,
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Chris Isidore",
+            "title": "2. Used cars have become unaffordable - CNN",
+            "description": "High prices and rising interest rates are putting used cars out of reach for a growing number of car shoppers.",
+            "url": "https://www.cnn.com/2022/09/29/business/used-cars-unaffordable/index.html",
+            "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/220929081816-01-carmax-used-cars-dealership.jpg?q=w_800,c_fill",
+            "publishedAt": "2022-09-29T18:23:00Z",
+            "content": "High prices and rising interest rates are putting used cars out of reach for a growing number of car shoppers.\r\nThats bad news for CarMax, the nations largest used car dealer. CarMax reported Thursda… [+2489 chars]"
+        },
+        {
+            "id": 3,
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Chris Isidore",
+            "title": "3. Used cars have become unaffordable - CNN",
+            "description": "High prices and rising interest rates are putting used cars out of reach for a growing number of car shoppers.",
+            "url": "https://www.cnn.com/2022/09/29/business/used-cars-unaffordable/index.html",
+            "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/220929081816-01-carmax-used-cars-dealership.jpg?q=w_800,c_fill",
+            "publishedAt": "2022-09-29T18:23:00Z",
+            "content": "High prices and rising interest rates are putting used cars out of reach for a growing number of car shoppers.\r\nThats bad news for CarMax, the nations largest used car dealer. CarMax reported Thursda… [+2489 chars]"
+        },
+        {
+            "id": 4,
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Chris Isidore",
+            "title": "Used cars have become unaffordable - CNN",
+            "description": "High prices and rising interest rates are putting used cars out of reach for a growing number of car shoppers.",
+            "url": "https://www.cnn.com/2022/09/29/business/used-cars-unaffordable/index.html",
+            "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/220929081816-01-carmax-used-cars-dealership.jpg?q=w_800,c_fill",
+            "publishedAt": "2022-09-29T18:23:00Z",
+            "content": "High prices and rising interest rates are putting used cars out of reach for a growing number of car shoppers.\r\nThats bad news for CarMax, the nations largest used car dealer. CarMax reported Thursda… [+2489 chars]"
+        },
+        {
+            "id": 5,
             "source": {
                 "id": "cnn",
                 "name": "CNN"

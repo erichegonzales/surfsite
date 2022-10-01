@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import { CardGroup, Container, Form, Pagination } from "react-bootstrap";
 import { BsSearch } from "react-icons/bs";
-import InfiniteScroll from "react-infinite-scroll-component";
 import NewsItem from "./NewsItem";
-import Loader from "./Loader";
-import EndMessage from "./EndMessage";
 
 const NewsFeed = () => {
   const [items, setItems] = useState([]);
@@ -13,42 +10,41 @@ const NewsFeed = () => {
   useEffect(() => {
     const getItems = async () => {
       const res = await fetch(
-        // `https://newsapi.org/v2/everything?q=surf-wsl&page=1&pageSize=20&sortBy=relevancy&language=en&apiKey=60dcae65b56641808aafbd67b95306c8`
+        `http://localhost:3004/articles?_page=1&_limit=2`
       );
+      // `https://newsapi.org/v2/everything?q=surf-wsl&page=1&pageSize=20&sortBy=relevancy&language=en&apiKey=60dcae65b56641808aafbd67b95306c8`
       const data = await res.json();
-      setItems(data.articles);
+      //   setItems(data.articles);
+      setItems(data);
     };
 
     getItems();
   }, []);
 
-   useEffect(() => {
+  useEffect(() => {
     const fetchItems = async () => {
       const res = await fetch(
-        // `https://newsapi.org/v2/everything?q=surf-wsl&page=${activePage}&pageSize=20&sortBy=relevancy&language=en&apiKey=60dcae65b56641808aafbd67b95306c8`
+        `http://localhost:3004/articles?_page=${activePage}&_limit=2`
       );
+      // `https://newsapi.org/v2/everything?q=surf-wsl&page=${activePage}&pageSize=20&sortBy=relevancy&language=en&apiKey=60dcae65b56641808aafbd67b95306c8`
       const data = await res.json();
-      setItems(data.articles);
+      //   setItems(data.articles);
+      setItems(data);
     };
 
-    fetchItems()
-
-    },[activePage]);
+    fetchItems();
+  }, [activePage]);
 
   let handlePageKeyClick = (number) => {
     setActivePage(number);
-    // fetchItems()
-    // // console.log(number)
-    // // fetch next page with page=number
-    // // update state that renders boxes
   };
+
   let pageKeys = [];
-  for (let number = 1; number <= 5; number++) {
+  for (let number = 1; number <= 5 && number > 0; number++) {
     pageKeys.push(
       <Pagination.Item
         key={number}
         activePage={number === activePage}
-        // onClick={() => handlePageKeyClick(number)}
         onClick={() => setActivePage(number)}
       >
         {number}
@@ -84,7 +80,11 @@ const NewsFeed = () => {
             <NewsItem key={item.id} item={item} />
           ))}
         </CardGroup>
-        <Pagination>{pageKeys}</Pagination>
+        <Pagination>
+          {/* <Pagination.Prev /> */}
+          {pageKeys}
+          <Pagination.Next />
+        </Pagination>
       </Container>
     </>
   );

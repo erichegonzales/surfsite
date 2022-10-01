@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
+from rest_framework.views import APIView
+from rest_framework.response import Response
 from . import serializers
 from . import models
 
@@ -34,3 +36,13 @@ class BookedLessonViewSet(viewsets.ModelViewSet):
 class ReviewViewSet(viewsets.ModelViewSet):
     queryset = models.Review.objects.all()
     serializer_class = serializers.ReviewSerializer
+    
+class Post_ViewSet(APIView):
+    def get(self, request):
+        try:
+            y
+            post_results = models.Post.objects.all()
+            all_posts = serializers.Post_Serializer(post_results, many=True)
+            return Response(all_posts.data)
+        except: 
+            return Response({'error':"somthing went wrong"})

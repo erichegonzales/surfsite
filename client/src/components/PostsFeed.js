@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "./Post";
 import Loader from "./Loader";
@@ -12,7 +12,7 @@ const PostsFeed = () => {
 
   useEffect(() => {
     const getPosts = async () => {
-      const res = await fetch(`http://localhost:3004/posts?_page=1&_limit=5`);
+      const res = await fetch(`http://127.0.0.1:8000/all-posts/`);
       const data = await res.json();
       setPosts(data);
     };
@@ -22,7 +22,7 @@ const PostsFeed = () => {
 
   const fetchPosts = async () => {
     const res = await fetch(
-      `http://localhost:3004/posts?_page=${page}&_limit=5`
+      `http://127.0.0.1:8000/posts?_page=${page}&_limit=5`
     );
     const data = await res.json();
     return data;
@@ -42,6 +42,15 @@ const PostsFeed = () => {
       <Row>
         <Col></Col>
         <Col xs={8}>
+          <Form>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Control type="email" placeholder="Create a post" />
+            <Button variant="primary" type="button">
+              Submit
+            </Button>
+            </Form.Group>
+
+          </Form>
           <InfiniteScroll
             dataLength={posts.length} //This is important field to render the next data
             next={fetchData}
